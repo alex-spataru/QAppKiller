@@ -2,7 +2,7 @@
    "enabled":true,
    "clients":[
       {
-         "app":"bf7eaaa1c2b0e832f6c214b115b5e8db",
+         "client":"bf7eaaa1c2b0e832f6c214b115b5e8db",
          "suspended":true
       }
    ]
