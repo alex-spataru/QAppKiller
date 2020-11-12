@@ -1,0 +1,3 @@
+# QAppSuspender
+
+README in progress...
