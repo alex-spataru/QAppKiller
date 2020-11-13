@@ -20,7 +20,7 @@
  * THE SOFTWARE.
  */
 
-#include "AppSuspender.h"
+#include "QAppKiller.h"
 
 #include <QJsonArray>
 #include <QJsonValue>
@@ -32,7 +32,7 @@
 /**
  * Initializes the class & connects SIGNALS/SLOTS
  */
-AppSuspender::AppSuspender(QObject *parent)
+QAppKiller::QAppKiller(QObject *parent)
    : QObject(parent)
 {
    m_suspended = false;
@@ -44,7 +44,7 @@ AppSuspender::AppSuspender(QObject *parent)
 /**
  * Returns the app cast URL
  */
-QString AppSuspender::url() const
+QString QAppKiller::url() const
 {
    return m_url;
 }
@@ -52,7 +52,7 @@ QString AppSuspender::url() const
 /**
  * Returns the client ID of the application
  */
-QString AppSuspender::client() const
+QString QAppKiller::client() const
 {
    return m_client;
 }
@@ -60,7 +60,7 @@ QString AppSuspender::client() const
 /**
  * Returns @c true if we should suspend application operations
  */
-bool AppSuspender::suspended() const
+bool QAppKiller::suspended() const
 {
    return m_suspended;
 }
@@ -68,7 +68,7 @@ bool AppSuspender::suspended() const
 /**
  * Returns @c true if we are currently downloading the app cast file
  */
-bool AppSuspender::downloadingAppCast() const
+bool QAppKiller::downloadingAppCast() const
 {
    return m_downloadingAppCast;
 }
@@ -76,7 +76,7 @@ bool AppSuspender::downloadingAppCast() const
 /**
  * Changes the app cast URL & initializes download in 1000 milliseconds
  */
-void AppSuspender::setUrl(const QString &url)
+void QAppKiller::setUrl(const QString &url)
 {
    if (m_url != url)
    {
@@ -90,7 +90,7 @@ void AppSuspender::setUrl(const QString &url)
 /**
  * Changes the client ID of the application
  */
-void AppSuspender::setClient(const QString &id)
+void QAppKiller::setClient(const QString &id)
 {
    if (m_client != id)
    {
@@ -102,11 +102,11 @@ void AppSuspender::setClient(const QString &id)
 /**
  * Begins the download process of the app cast file
  */
-void AppSuspender::downloadAppCast()
+void QAppKiller::downloadAppCast()
 {
    if (!url().isEmpty())
    {
-      auto userAgent = QString("%1/%2 (Qt; QAppSuspender)").arg(qApp->applicationName(), qApp->applicationVersion());
+      auto userAgent = QString("%1/%2 (Qt; QQAppKiller)").arg(qApp->applicationName(), qApp->applicationVersion());
       QNetworkRequest request(url());
       request.setRawHeader("User-Agent", userAgent.toUtf8());
       m_networkAccessManager.get(request);
@@ -119,7 +119,7 @@ void AppSuspender::downloadAppCast()
 /**
  * Reads the app cast file & updates internal variables
  */
-void AppSuspender::onReply(QNetworkReply *reply)
+void QAppKiller::onReply(QNetworkReply *reply)
 {
    // Check pointer
    if (!reply)
