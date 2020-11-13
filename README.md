@@ -1,3 +1,7 @@
+<a href="#">
+    <img width="156px" src="doc/mofo.png" align="right" />
+</a>
+
 # QAppKiller
 
 QAppKiller allows your app to know if it should reduce operations and/or inhibit the end user to use your application.
@@ -73,7 +77,3 @@ This file allows us to know which apps should we "kill" or "suspend", it has the
 ## License
 
 This project is released under the terms & conditions of the MIT licence. For more information, check the [`LICENSE.md`](LICENSE.md) file.
-
-
-
- 
