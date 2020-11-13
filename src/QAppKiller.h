@@ -20,14 +20,14 @@
  * THE SOFTWARE.
  */
 
-#ifndef APP_SUSPENDER_H
-#define APP_SUSPENDER_H
+#ifndef Q_APP_KILLER_H
+#define Q_APP_KILLER_H
 
 #include <QTimer>
 #include <QObject>
 #include <QNetworkAccessManager>
 
-class AppSuspender : public QObject
+class QAppKiller : public QObject
 {
    Q_OBJECT
 
@@ -43,7 +43,7 @@ signals:
    void downloadingAppCastChanged();
 
 public:
-   AppSuspender(QObject *parent = Q_NULLPTR);
+   QAppKiller(QObject *parent = Q_NULLPTR);
 
    QString url() const;
    QString client() const;
