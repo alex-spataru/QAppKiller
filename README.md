@@ -20,26 +20,26 @@ In the case that they pay me, I just need to update my `Clients.json` file & the
 
 int main(int argc, char**argv)
 {
-	QGuiApplication app(argc, argv);
+   QGuiApplication app(argc, argv);
 	
-	QAppKiller appKiller;
-	appKiller.setClient("YOUR_APP_ID");
-	appKiller.setUrl("URL_TO_APPCAST_JSON_FILE");
+   QAppKiller appKiller;
+   appKiller.setClient("YOUR_APP_ID");
+   appKiller.setUrl("URL_TO_APPCAST_JSON_FILE");
 	
-	// QAppKiller shall now automatically download
-	// the app cast file & decide if we should
-	// stop the application from working...
+   // QAppKiller shall now automatically download
+   // the app cast file & decide if we should
+   // stop the application from working...
 	
-	//
-	// You can then use QAppKiller::suspended() to
-	// know if your application should stop working
-	// to screw your dick client.
-	// 
-	// QAppKiller can also be used with your QML
-	// code :)
-	//
+   //
+   // You can then use QAppKiller::suspended() to
+   // know if your application should stop working
+   // to screw your dick client.
+   // 
+   // QAppKiller can also be used with your QML
+   // code :)
+   //
 	
-	return app.exec();
+   return app.exec();
 }
 
 ```
@@ -68,11 +68,11 @@ This file allows us to know which apps should we "kill" or "suspend", it has the
 }
 ```
 
-If `enabled` is set to false, `QAppKiller` shall ignore the value of `suspended`.
+**Note:** If `enabled` is set to false, `QAppKiller` shall ignore the value of `suspended`.
 
-## Licence
+## License
 
-This project is released under the terms & conditions of the MIT licence. For more information, check the `LICENCE.md` file.
+This project is released under the terms & conditions of the MIT licence. For more information, check the [`LICENSE.md`](LICENSE.md) file.
 
 
 
