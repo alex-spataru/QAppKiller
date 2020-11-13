@@ -107,8 +107,10 @@ void QAppKiller::downloadAppCast()
    if (!url().isEmpty())
    {
       auto userAgent = QString("%1/%2 (Qt; QQAppKiller)").arg(qApp->applicationName(), qApp->applicationVersion());
+
       QNetworkRequest request(url());
       request.setRawHeader("User-Agent", userAgent.toUtf8());
+      request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::AlwaysNetwork);
       m_networkAccessManager.get(request);
 
       m_downloadingAppCast = true;
