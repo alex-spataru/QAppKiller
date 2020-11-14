@@ -12,7 +12,7 @@ This is the result, Dick-corp is currently investing heavily on marketing, and t
 
 In the case that they pay me, I just need to update my `BAD_CLIENTS.json` file & the application immediately starts working perfectly again (and the end users shall never see my fuck-you banner). 
 
-**UPDATE:** the library worked for its true purpose, they payed me as soon as they saw the banner.
+**UPDATE:** the library worked for its true purpose, they payed me as soon as they saw the "application suspended" banner.
 
 ## Usage
 
