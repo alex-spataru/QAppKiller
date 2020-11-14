@@ -10,7 +10,9 @@ This library was quickly written by me during an afternoon in which I was desper
 
 This is the result, Dick-corp is currently investing heavily on marketing, and they are publishing an application that stops working & displays a banner saying that they are a bunch of cheap bastards. Fuck them.
 
-In the case that they pay me, I just need to update my `Clients.json` file & the application immediately starts working perfectly again (and the end users shall never see my fuck-you banner). 
+In the case that they pay me, I just need to update my `BAD_CLIENTS.json` file & the application immediately starts working perfectly again (and the end users shall never see my fuck-you banner). 
+
+**UPDATE:** the library worked for its true purpose, they payed me as soon as they saw the banner.
 
 ## Usage
 
