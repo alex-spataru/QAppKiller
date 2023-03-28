@@ -6,7 +6,7 @@
 
 QAppKiller allows your app to know if it should reduce operations and/or inhibit the end user to use your application.
 
-This library was quickly written by me during an afternoon in which I was desperate to get one of my clients to pay me. The corporate group received the final application binary and someone thought that it was a good idea to try to avoid paying me for my 8-month-long work.
+This library was quickly written by me during an afternoon in which I was desperate to get one of my clients to pay me. The corporate group received the final application binary and someone thought that it was a good idea to try to avoid paying me for my 8-month-long work. That idiot thought that he could outsmart me, and he was wrong.
 
 In the case that they pay me, I just need to update my `BAD_CLIENTS.json` file & the application immediately starts working again (and the end users shall never see my fuck-you banner). 
 
